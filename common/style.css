@@ -1,0 +1,114 @@
+.background {
+  background-color: aliceblue;
+  color: #1b877c;
+}
+.full-back {
+  height: 100vh;
+  width: 100vw;
+}
+.background2 {
+  color: #ef6951;
+  background-color: #ffcd68;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 20px 10px;
+  font-size: 20px;
+  border: transparent;
+}
+
+.btn-primary {
+  background-color: #b3e2cf;
+  color: #1b877c;
+  border: transparent;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-check:focus + .btn-primary {
+  background-color: #1b877c;
+  color: aliceblue;
+  box-shadow: none;
+}
+
+.btn-contact {
+  background-color: #1b877c;
+  color: aliceblue;
+}
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active,
+.btn-check:focus + .btn-contact {
+  background-color: #209c8f;
+  color: aliceblue;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.btn-menu {
+  color: aliceblue;
+  background-color: #fca900;
+}
+.btn-menu:hover,
+.btn-menu:focus,
+.btn-menu:active,
+.btn-check:focus + .btn-menu {
+  background-color: #ffcd68;
+  color: aliceblue;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: aliceblue;
+  color: #ef6951;
+  border: transparent;
+  font-weight: 700;
+  padding: 20px 10px;
+  font-size: 20px;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-check:focus + .btn-secondary {
+  background-color: #ef6951;
+  color: aliceblue;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.btn-danger {
+  font-weight: 700;
+  padding: 20px 10px;
+  font-size: 20px;
+}
+
+.heading-1 {
+  font-size: calc(40px + 2vw);
+  font-weight: 600;
+}
+.mb-neg-5 {
+  margin-bottom: -5px;
+}
+
+.section-left {
+  background-color: #b3e2cf;
+  height: fit-content;
+}
+
+.display-7 {
+  font-size: 2rem;
+}
+
+.display-8 {
+  font-size: 1.5rem;
+}
+
+.display-9 {
+  font-size: 1.3rem;
+}
