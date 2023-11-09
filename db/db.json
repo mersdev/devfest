@@ -1,5 +1,30 @@
 {
   "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
   "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "quiz": [
+    {
+      "id": "animal-kingdom",
+      "teacher": "Madam Kong",
+      "link": "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/"
+    }
+  ],
+  "animal-kingdom": [
+    {
+      "id": 1,
+      "question": "Which animal has sharp teeth and claws?",
+      "answer": "Tiger"
+    },
+    {
+      "id": 2,
+      "question": "Which animal lives in the water",
+      "answer": "Dolphin"
+    },
+    {
+      "id": 3,
+      "question": "Which animal has a big beak?",
+      "answer": "Hornbill"
+    },
+    { "id": 4, "question": "Which animal can dig?", "answer": "Boar" },
+    { "id": 5, "question": "Which animal can bark?", "answer": "Dog" }
+  ]
 }

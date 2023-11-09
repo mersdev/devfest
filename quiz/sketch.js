@@ -1,10 +1,11 @@
 // The video
 let video;
 // For displaying the label
-let label = "waiting...";
+let label = "Processing the data...";
 // The classifier
 let classifier;
 let modelURL = "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/";
+let index = 1;
 
 // STEP 1: Load the model!
 function preload() {
@@ -47,6 +48,7 @@ function draw() {
 
 // STEP 3: Get the classification!
 function gotResults(error, results) {
+  let answer = document.getElementsByClassName("answer")[0].innerHTML;
   // Something went wrong!
   if (error) {
     console.error(error);
@@ -56,6 +58,9 @@ function gotResults(error, results) {
   console.log(results);
   if (results[0].confidence > 0.98) {
     label = results[0].label;
+    if (label == answer) {
+      getQuestion((index += 1));
+    }
   } else {
     label = "Waiting...";
   }

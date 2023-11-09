@@ -34,7 +34,11 @@
       rel="stylesheet"
     />
     <title>Learn with OwO</title>
-    <link rel="shortcut icon" href="pic/rainbow.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="common/pic/rainbow.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="common/style.css" />
   </head>
   <body>
@@ -56,7 +60,7 @@
               Welcome to
             </h3>
             <h1 class="heading-1 text-center text-md-start">Learn with OwO</h1>
-            <form>
+            <form class="studNameForm">
               <div class="mb-3">
                 <label
                   for="exampleInputName"
@@ -65,24 +69,35 @@
                   >Student Name</label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="studName"
                   aria-describedby="emailHelp"
+                  required
                 />
                 <div id="emailHelp" class="form-text">
                   Follow your name on the textbook.
                 </div>
               </div>
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary">
-                  Start Quiz
-                </button>
+                <input
+                  type="submit"
+                  class="btn btn-primary"
+                  value="Start the Quiz Now"
+                />
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      let form = document.getElementsByClassName("studNameForm")[0];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let name = document.getElementById("studName").value;
+        window.location.replace("menu/index.html?name=" + name);
+      });
+    </script>
   </body>
 </html>
