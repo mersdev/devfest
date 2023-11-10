@@ -1,11 +1,10 @@
 // The video
 let video;
 // For displaying the label
-let label = "Processing the data...";
+let label = "Loading the model...";
 // The classifier
 let classifier;
 let modelURL = "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/";
-let index = 1;
 
 // STEP 1: Load the model!
 function preload() {
@@ -56,14 +55,33 @@ function gotResults(error, results) {
   }
   // Store the label and classify again!
   console.log(results);
+  let index = getCookie("index");
   if (results[0].confidence > 0.98) {
     label = results[0].label;
     if (label == answer) {
-      getQuestion((index += 1));
+      window.location.replace(
+        "../correct/index.html?quiz=animal-kingdom&id=" + index
+      );
     }
   } else {
-    label = "Waiting...";
+    label = "Show image to the camera. TQ";
   }
 
   classifyVideo();
 }
+
+function getIndex() {
+  let quiz_index = getCookie("index");
+  if (quiz_index === "empty") {
+    quiz_index = 1;
+  } else {
+    quiz_index = parseInt(quiz_index) + 1;
+  }
+  setCookie("index", quiz_index, 1);
+  return quiz_index;
+}
+
+window.onload = function () {
+  let index = getIndex();
+  getQuestion(index);
+};

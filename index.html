@@ -40,6 +40,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="common/style.css" />
+    <script src="common/common.js"></script>
   </head>
   <body>
     <div
@@ -96,7 +97,8 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         let name = document.getElementById("studName").value;
-        window.location.replace("menu/index.html?name=" + name);
+        setCookie("student", name, 1);
+        window.location.replace("menu/index.html");
       });
     </script>
   </body>

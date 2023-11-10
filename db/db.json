@@ -1,11 +1,66 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "student": [
+    {
+      "id": 1,
+      "name": "Xue Ren",
+      "class": "1 Merah",
+      "teacher": "Miss Kong",
+      "gender": "female"
+    },
+    {
+      "id": 2,
+      "name": "Mohd Hafiz",
+      "class": "1 Kuning",
+      "teacher": "Mr Lim",
+      "gender": "male"
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "teacher": "Mr Lim",
+      "name": "Mr Lim Bao Ren",
+      "subject": "Science",
+      "phone": "016-5709826",
+      "email": "limbr@withOwO.com",
+      "profile": "Science.jpeg",
+      "background": "#CEF8FE"
+    },
+    {
+      "id": 2,
+      "teacher": "Miss Kong",
+      "name": "Miss Kong Xiao Ying",
+      "subject": "Language",
+      "phone": "016-5709826",
+      "email": "kongxy@withOwO.com",
+      "profile": "Chinese.jpeg",
+      "background": "#f3e1fc"
+    }
+  ],
   "quiz": [
     {
-      "id": "animal-kingdom",
-      "teacher": "Madam Kong",
-      "link": "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/"
+      "id": "1",
+      "quiz": "animal-kingdom",
+      "description": "Journey through the animal kingdom with our interactive quiz! Identify animals from around the globe, expanding your knowledge of the natural world.",
+      "teacher": "Miss Kong",
+      "link": "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/",
+      "due": "12-11-2023"
+    },
+    {
+      "id": "2",
+      "quiz": "math",
+      "description": "Looking for a fun way to test your math skills? Try answering math questions with handwritten digits! It's a great way to practice your problem-solving skills!",
+      "teacher": "Miss Ying",
+      "link": "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/",
+      "due": "15-11-2023"
+    },
+    {
+      "id": "3",
+      "quiz": "hand-sign",
+      "description": "Are you ready to test your knowledge of Malaysian hand signs? Take this fun and challenging quiz to see how well you know these unique gestures.",
+      "teacher": "Mr Lim",
+      "link": "https://teachablemachine.withgoogle.com/models/QDcMNsnKu/",
+      "due": "18-11-2023"
     }
   ],
   "animal-kingdom": [

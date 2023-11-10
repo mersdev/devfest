@@ -1,7 +1,6 @@
-function getQuestion(id) {
+function getTeacherInfo() {
   // Define the API URL
-  const apiUrl = "http://localhost:3000/animal-kingdom/" + id;
-  console.log("URL: " + apiUrl);
+  const apiUrl = "http://localhost:3000/teacher";
 
   // Make a GET request
   fetch(apiUrl)
@@ -12,11 +11,12 @@ function getQuestion(id) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
-      document.getElementsByClassName("question")[0].innerHTML = data.question;
-      document.getElementsByClassName("answer")[0].innerHTML = data.answer;
+      setCookie("length", data.length, 1);
+      console.log(getCookie("length"));
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
+
+window.onload = getTeacherInfo();
